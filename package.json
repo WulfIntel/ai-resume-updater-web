@@ -1,0 +1,29 @@
+{
+  "name": "ai-resume-updater-web",
+  "version": "1.0.0",
+  "description": "AI Resume Upgrade — ATS-Optimized, Job-Matched Rewrite (3 Versions Included)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": [
+    "resume",
+    "openai",
+    "stripe",
+    "ats",
+    "web-app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.77.0",
+    "stripe": "^16.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

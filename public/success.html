@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment successful – your AI resume upgrade is ready</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download your AI-upgraded resume and generate additional versions using remaining credits.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>AI Resume Upgrade</h1>
+      <p class="tagline">Payment successful – your AI resume upgrade is ready</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Your enhanced resume</h2>
+      <div id="creditsBadge" class="credits-badge">Loading credits…</div>
+      <pre id="enhancedResume" class="resume-output" aria-label="Enhanced resume"></pre>
+
+      <div class="button-row">
+        <button id="copyBtn" type="button" class="btn-secondary">Copy to clipboard</button>
+        <button id="downloadTxtBtn" type="button" class="btn-secondary">Download as .txt</button>
+        <button id="downloadMdBtn" type="button" class="btn-secondary">Download as .md</button>
+      </div>
+
+      <div id="initialStatus" class="status-message" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>Request another version (uses remaining credits)</h2>
+      <p>
+        You can generate up to 2 additional versions from this purchase.
+        Update your resume input or notes below and submit to use another credit.
+      </p>
+
+      <form id="revisionForm" enctype="multipart/form-data" novalidate>
+        <div class="form-group">
+          <label for="revResumeFile">Upload new resume file (optional)</label>
+          <input type="file" id="revResumeFile" name="resumeFile" accept=".pdf,.doc,.docx,.txt">
+          <p class="help-text">
+            As with the first version, this demo best supports pasted text or plain <code>.txt</code> files.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="revResumeText">Paste updated resume text (optional)</label>
+          <textarea id="revResumeText" name="resumeText" rows="8" placeholder="Paste an updated version of your resume, or leave blank to rely on the file."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="revNotes">Additional notes for this version (optional)</label>
+          <textarea id="revNotes" name="notes" rows="4" placeholder="What should this version emphasize or change?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="revJobDescription">Target job description (required)</label>
+          <textarea id="revJobDescription" name="jobDescription" rows="6" required placeholder="Paste the job description you want to target with this version."></textarea>
+        </div>
+
+        <div id="revisionStatus" class="status-message" aria-live="polite"></div>
+
+        <button type="submit" id="revisionSubmitBtn" class="btn-primary">
+          Generate another version using my remaining credits
+        </button>
+      </form>
+
+      <div id="noCreditsContainer" class="no-credits" hidden>
+        <p id="noCreditsMessage"></p>
+        <a href="/" class="btn-link">Start a new purchase</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> AI Resume Upgrade. Demo use only.</p>
+    </div>
+  </footer>
+
+  <script src="success.js"></script>
+</body>
+</html>

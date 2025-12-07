@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment canceled – AI Resume Upgrade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your payment was canceled. Return to the home page to try again.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>AI Resume Upgrade</h1>
+      <p class="tagline">Payment canceled</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Payment canceled</h2>
+      <p>
+        Your Stripe Checkout payment was canceled or not completed.
+        No charges were made, and no resume credits were issued for this attempt.
+      </p>
+      <p>
+        You can return to the home page to start again whenever you’re ready.
+      </p>
+      <a href="/" class="btn-primary">Back to home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> AI Resume Upgrade. Demo use only.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Resume Upgrade — ATS-Optimized, Job-Matched Rewrite (3 Versions Included)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Resume Upgrade: get up to 3 ATS-optimized, job-matched resume versions for $5.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>AI Resume Upgrade</h1>
+      <p class="tagline">ATS-Optimized, Job-Matched Rewrite — <strong>3 Versions Included</strong></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Upgrade your resume in minutes</h2>
+      <p>
+        This tool rewrites your resume using AI designed for sales and customer-facing roles.
+        You upload or paste your resume, add optional notes, and provide the job description.
+      </p>
+      <p>
+        For a one-time payment of <strong>$5</strong>, you get up to <strong>3 AI-optimized versions</strong> of your resume:
+        one initial rewrite plus up to two further revisions tailored to the same purchase.
+      </p>
+      <p>
+        Your data is used only to generate your resume versions during this session and is stored
+        in memory on the server. It is not designed for long-term storage or reuse.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Step 1: Provide your resume and target job</h2>
+      <form id="resumeForm" enctype="multipart/form-data" novalidate>
+        <div class="form-group">
+          <label for="resumeFile">Upload resume file (optional)</label>
+          <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.doc,.docx,.txt">
+          <p class="help-text">
+            For best results, paste your resume text below. This demo only fully supports plain <code>.txt</code>
+            files; PDFs and Word docs are not parsed.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="resumeText">Paste your resume text (recommended)</label>
+          <textarea id="resumeText" name="resumeText" rows="10" placeholder="Paste your current resume here..."></textarea>
+          <p class="help-text">
+            Recommended: paste the full text of your resume so the AI can reliably read every detail.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes for the AI (optional)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tone, roles you’re targeting, key achievements to highlight, etc."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="jobDescription">Target job description (required)</label>
+          <textarea id="jobDescription" name="jobDescription" rows="8" required placeholder="Paste the full job description for the role you’re targeting."></textarea>
+        </div>
+
+        <div id="status" class="status-message" aria-live="polite"></div>
+
+        <button type="submit" class="btn-primary">
+          Continue to payment ($5 for 3 versions)
+        </button>
+      </form>
+    </section>
+
+    <section class="info">
+      <h3>How credits work</h3>
+      <ul>
+        <li>Each purchase gives you 3 credits linked to a single Stripe Checkout payment.</li>
+        <li>1 credit is used for your initial upgrade right after payment.</li>
+        <li>Up to 2 additional credits can be used for revised versions on the success page.</li>
+        <li>Once all 3 credits are used, you can start a new purchase from this page.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> AI Resume Upgrade. Demo use only.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
