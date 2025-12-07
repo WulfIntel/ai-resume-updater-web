@@ -27,6 +27,9 @@ app.use('/api', (req, res) => {
   res.status(404).json({ error: 'NOT_FOUND', message: 'API endpoint not found.' });
 });
 
-app.listen(config.port, () => {
-  console.log(`AI Resume Updater Web server running on port ${config.port}`);
+const port = process.env.PORT || config.port || 3000;
+const host = "0.0.0.0";
+
+app.listen(port, host, () => {
+  console.log(`AI Resume Updater Web server listening on ${host}:${port}`);
 });
